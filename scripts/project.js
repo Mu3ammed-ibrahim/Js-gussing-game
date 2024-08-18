@@ -13,7 +13,7 @@ const validationPlayerSelection = (playerSelection) => {
 const getPlayerGuess = () => {
   let playerSelection;
   do {
-    playerSelection = prompt("Hurry up warrior we need you to help us defeat Dr strange by guessing a number between 1 and 100");
+    playerSelection = prompt("Hurry up warrior press ctrl+shift+i to play we need you to help us defeat Dr strange by guessing a number between 1 and 100");
 
     if (playerSelection === null) {
       console.log("You have exited the game.");
@@ -38,7 +38,7 @@ const checkGuess = (playerSelection, computerSelection) => {
   } else if (playerSelection < computerSelection) {
     return "Your guess is too low!";
   } else {
-    return "Congratulations! You have beaten Dr. Strange and guessed the correct number!";
+    return "Congratulations! You have defeated Dr. Strange and guessed the correct number!";
   }
 };
 
@@ -49,7 +49,7 @@ const game = () => {
 
   if (!playerReady) {
     const stayOrLeave = confirm(
-      "You chose to leave the game. Do you want to exit or stay?"
+      "You chose to leave the game. Do you want to exit(Cancle) or stay (ok)?"
     );
 
     if (stayOrLeave) {
